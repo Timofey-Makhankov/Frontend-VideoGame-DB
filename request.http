@@ -1,0 +1,46 @@
+GET http://localhost:8080/api/v1/ratings HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkYTY4MTkwNS02YThkLTQzM2EtYTBlYy1mZDBhZjk3M2MyMDYiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQ1JFQVRFIn0seyJhdXRob3JpdHkiOiJSRUFEIn0seyJhdXRob3JpdHkiOiJVUERBVEUifSx7ImF1dGhvcml0eSI6IkRFTEVURSJ9LHsiYXV0aG9yaXR5IjoiUkVBRCJ9XSwiaWF0IjoxNjkzNTU1MDc1LCJleHAiOjE2OTM2NTUwNzUsImlzcyI6InVrMjIzIn0.H69_sV5CwXIl8YAdgm14xeFSA6IeQsEnJZfxnw8nYJA 
+###
+
+POST http://localhost:8080/api/v1/videogames HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRCJ9XSwic3ViIjoiZDU5OWJiN2ItOWM4My00MDBjLThlMDItNWZlOTE1N2JkNGJmIiwiaWF0IjoxNjkyODY2MzY3LCJleHAiOjE2OTI5NjYzNjcsImlzcyI6InVrMjIzIn0.Ha8dsSLEGTtUVK4lWyzGVcJXl8XYBs9MlcREMVzGTVc
+
+{
+    "name": "Grand Theft Auto V",
+    "description": "It's a Game",
+    "release_date": "2013/09/17"
+}
+
+###
+
+POST http://localhost:8080/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "t@g.com",
+    "password": "1234"
+}
+
+###
+
+GET http://localhost:8080/role/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5N2VkYmQ2Zi1iMDljLTQ0NDctOWNhZS00ZThiMWJhYzdjYjYiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQ1JFQVRFIn0seyJhdXRob3JpdHkiOiJSRUFEIn0seyJhdXRob3JpdHkiOiJVUERBVEUifSx7ImF1dGhvcml0eSI6IkRFTEVURSJ9XSwiaWF0IjoxNjkzNDgyMzUyLCJleHAiOjE2OTM1ODIzNTIsImlzcyI6InVrMjIzIn0.H5E6pjSmxJszi0Jdb-FJNp-XzuRIadTc1yU2lQciP5Y
+
+###
+
+POST http://localhost:8080/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "t@g.com",
+    "password": "1234"
+}
+
+###
+
+PUT http://localhost:8080/user/api/v1/user/06e2ca25-d787-4143-b7b8-65a42a607a04/role HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRCJ9XSwic3ViIjoiMDZlMmNhMjUtZDc4Ny00MTQzLWI3YjgtNjVhNDJhNjA3YTA0IiwiaWF0IjoxNjkzMzgwMDc5LCJleHAiOjE2OTM0ODAwNzksImlzcyI6InVrMjIzIn0.0IXJ2brWaxckJqB6_Pv3dZ0W3DfSBkiU_QFfrLDQvq4
+Content-Type: text/plain
+
+ADMIN
